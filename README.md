@@ -121,7 +121,7 @@ Preparar el entorno Arduino IDE:
   - PubSubClient by Nick O'Leary
 
 - Configurar el soporte para placas ESP32:
- - Añadir https://resource.heltec.cn/download/package_heltec_esp32_index.json a la lista de URLs de Gestor de Tarjetas en las preferencias de Arduino IDE.
+  - Añadir https://resource.heltec.cn/download/package_heltec_esp32_index.json a la lista de URLs de Gestor de Tarjetas en las preferencias de Arduino IDE.
 
 - Cargar los archivos .ino:
   - Cargar `emisor.ino` al nodo emisor
