@@ -72,52 +72,51 @@ Simulador Go
 
 1. **Broker MQTT**:
 
-```bash
-./iniciar_broker.sh
-```
+  ```bash
+  ./iniciar_broker.sh
+  ```
 
 2. **Node-RED**:
 
-```bash
-npm install
-node-red
-```
+  ```bash
+  npm install
+  node-red
+  ```
 
-Importar el archivo `flows.json`
+  Importar el archivo `flows.json`
 
 3. **Base de datos**: Crear tabla en PostgreSQL (adecuar la conexión a PostgreSQL en Node-RED de acuerdo a su configuración):
 
-```sql
-CREATE TABLE mediciones (
-  id_medicion SERIAL PRIMARY KEY,
-  tiempo TIMESTAMP NOT NULL,
-  nodo VARCHAR(100) NOT NULL,
-  tipo_sensor VARCHAR(100) NOT NULL,
-  valor FLOAT NOT NULL
-);
-```
+  ```sql
+  CREATE TABLE mediciones (
+    id_medicion SERIAL PRIMARY KEY,
+    tiempo TIMESTAMP NOT NULL,
+    nodo VARCHAR(100) NOT NULL,
+    tipo_sensor VARCHAR(100) NOT NULL,
+    valor FLOAT NOT NULL
+  );
+  ```
 
 4. **Simulador** (opcional):
 
-```bash
-cd simulador
-# Asegurar que las dependencias estén correctamente configuradas
-go mod tidy
-# Ejecutar el simulador
-go run cmd/main.go
-```
+  ```bash
+  cd simulador
+  # Asegurar que las dependencias estén correctamente configuradas
+  go mod tidy
+  # Ejecutar el simulador
+  go run cmd/main.go
+  ```
 
 5. **ESP32**: Cargar los archivos correspondientes a los dispositivos usando Arduino IDE
 
-Debe tener instalados:
-- Adafruit BusIO by Adafruit
-- Heltec ESP32 Dev-Boards by Heltec Automation
-- LoRa by Sandeep Mistry
-- PubSubClient by Nick O'Leary
+  Debe tener instalados:
+  - Adafruit BusIO by Adafruit
+  - Heltec ESP32 Dev-Boards by Heltec Automation
+  - LoRa by Sandeep Mistry
+  - PubSubClient by Nick O'Leary
 
-> Nota: Asegurarse de tener instalado el soporte para placas ESP32 en Arduino IDE. 
-> Añadir https://resource.heltec.cn/download/package_heltec_esp32_index.json
-> a la lista de URLs de Gestor de Tarjetas en las preferencias de Arduino IDE.
+  Nota: Asegurarse de tener instalado el soporte para placas ESP32 en Arduino IDE. 
+  Añadir https://resource.heltec.cn/download/package_heltec_esp32_index.json a la lista de URLs de Gestor de Tarjetas en las preferencias de Arduino IDE.
 
 ## Dashboard
 
