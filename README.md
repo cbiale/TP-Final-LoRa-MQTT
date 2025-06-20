@@ -70,13 +70,14 @@ Simulador Go
 
 ## Instalación
 
-### **Broker MQTT**:
+### Broker MQTT:
 
 ```bash
 ./iniciar_broker.sh
 ```
+Nota: debe tener instalado Docker
 
-### **Node-RED**:
+### Node-RED:
 
 ```bash
 npm install
@@ -85,7 +86,7 @@ node-red
 
 Importar el archivo `flows.json`
 
-### **Base de datos**: 
+### Base de datos: 
 
 Crear tabla en PostgreSQL (adecuar la conexión a PostgreSQL en Node-RED de acuerdo a su configuración):
 
@@ -99,7 +100,7 @@ CREATE TABLE mediciones (
 );
 ```
 
-### **Simulador** (opcional):
+### Simulador (opcional):
 
 ```bash
 cd simulador
@@ -109,26 +110,22 @@ go mod tidy
 go run cmd/main.go
 ```
 
-### **ESP32**: 
-
-Preparar el entorno Arduino IDE:
+### ESP32: 
 
 Preparar el entorno Arduino IDE:
 
 1. Instalar las siguientes bibliotecas usando el Gestor de Bibliotecas:
-
   - Adafruit BusIO by Adafruit
   - Heltec ESP32 Dev-Boards by Heltec Automation
   - LoRa by Sandeep Mistry
   - PubSubClient by Nick O'Leary
 
 2. Configurar el soporte para placas ESP32:
-
  - Añadir https://resource.heltec.cn/download/package_heltec_esp32_index.json a la lista de URLs de Gestor de Tarjetas en las preferencias de Arduino IDE.
 
 3. Cargar los archivos .ino:
-- Cargar `emisor.ino` al nodo emisor
-- Cargar `receptor.ino` al nodo receptor
+  - Cargar `emisor.ino` al nodo emisor
+  - Cargar `receptor.ino` al nodo receptor
 
 
 ## Dashboard
