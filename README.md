@@ -4,7 +4,7 @@
 
 Este proyecto implementa un sistema de telemetría agrícola utilizando módulos ESP32 LoRa para la transmisión de datos de sensores, MQTT para la comunicación, Node-RED para el procesamiento y PostgreSQL para el almacenamiento de datos.
 
-El proyecto fue desarrollado como trabajo final de la  asignatura **Principios y Aplicaciones para dispositivos LoRa/LoRaWAN** dictada por el Docente **Dr. Lic. Roberto Federico FARFÁN** en el marco de la **Maestría en Internet de las Cosas** dictada por la **Facultad de Ingenieria** de la **Universidad de Buenos Aires**.
+El proyecto fue desarrollado como trabajo final de la  asignatura **Principios y Aplicaciones para dispositivos LoRa/LoRaWAN** dictada por el Docente **Dr. Lic. Roberto Federico FARFÁN** en el marco de la **Maestría en Internet de las Cosas** dictada por la **Facultad de Ingeniería** de la **Universidad de Buenos Aires**.
 
 
 ## Estructura del Proyecto
