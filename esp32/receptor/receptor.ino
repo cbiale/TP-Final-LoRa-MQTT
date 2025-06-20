@@ -12,8 +12,8 @@
 #define DIO0 26
 
 // Configuración WiFi
-const char* ssid = "TP-Link_9471";
-const char* password = "07737145";
+const char* ssid = "xxxxxxx";  // Cambia por tu SSID
+const char* password = "xxxxxxx";  // Cambia por tu contraseña WiFi
 
 // Configuración MQTT
 const char* mqtt_server = "192.168.0.105";  // usar hostname -I
