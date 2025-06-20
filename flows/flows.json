@@ -1,0 +1,621 @@
+[
+    {
+        "id": "95ddaf5d0d1f31e1",
+        "type": "tab",
+        "label": "Flujo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "d1b62a3de4e88812",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "e59955f95c0928cd",
+        "type": "postgreSQLConfig",
+        "name": "IoT",
+        "host": "127.0.0.1",
+        "hostFieldType": "str",
+        "port": "5433",
+        "portFieldType": "num",
+        "database": "postgres",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "applicationName": "",
+        "applicationNameType": "str",
+        "max": "20",
+        "maxFieldType": "num",
+        "idle": "30000",
+        "idleFieldType": "num",
+        "connectionTimeout": "10000",
+        "connectionTimeoutFieldType": "num",
+        "user": "postgres",
+        "userFieldType": "str",
+        "password": "postgres",
+        "passwordFieldType": "str"
+    },
+    {
+        "id": "e5c30cdace2b7b54",
+        "type": "ui_tab",
+        "name": "Nodos",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "4495077cf8bd6537",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "SensorWave - Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "26415a70beb4b30c",
+        "type": "ui_group",
+        "name": "Listado de nodos",
+        "tab": "e5c30cdace2b7b54",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "fdb9a834fe2a2dc5",
+        "type": "ui_group",
+        "name": "Sensores del Nodo",
+        "tab": "e5c30cdace2b7b54",
+        "order": 2,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "198c89dea33cfc6d",
+        "type": "ui_group",
+        "name": "Historial",
+        "tab": "e5c30cdace2b7b54",
+        "order": 3,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7c9bfae543d97896",
+        "type": "mqtt in",
+        "z": "95ddaf5d0d1f31e1",
+        "name": "Msj MQTT",
+        "topic": "mediciones/#",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "d1b62a3de4e88812",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 80,
+        "wires": [
+            [
+                "26257359ad10a345"
+            ]
+        ],
+        "outputLabels": [
+            "msg"
+        ]
+    },
+    {
+        "id": "3e8fd2e6e3f44a91",
+        "type": "postgresql",
+        "z": "95ddaf5d0d1f31e1",
+        "name": "",
+        "query": "INSERT INTO mediciones \n(tiempo, nodo, tipo_sensor, valor) \nVALUES \n(NOW(), $1, $2, $3)\n",
+        "postgreSQLConfig": "e59955f95c0928cd",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 930,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "26257359ad10a345",
+        "type": "function",
+        "z": "95ddaf5d0d1f31e1",
+        "name": "Armar SQL",
+        "func": "// Procesar payload JSON\nlet data = msg.payload;\n\nlet mensajes = [];\n\nif (data.sensores && Array.isArray(data.sensores)) {\n    data.sensores.forEach(sensor => {\n        if (sensor.tipoSensor === 'temp') {\n            sensor.tipoSensor = 'temperatura';\n        }\n        if (sensor.tipoSensor === 'hum') {\n            sensor.tipoSensor = 'humedad';\n        }\n        if (sensor.tipoSensor === 'hums') {\n            sensor.tipoSensor = 'humedad_suelo';\n        }\n        if (sensor.tipoSensor === 'pres') {\n            sensor.tipoSensor = 'presión';\n        }\n        if (sensor.tipoSensor === 'lum') {\n            sensor.tipoSensor = 'luminosidad';\n        }\n        mensajes.push({\n            nodo : data.nodo, \n            tipo_sensor: sensor.tipoSensor, \n            valor : sensor.valor,\n        })\n    });\n}\n\nconsole.log(mensajes);\nmsg.payload = mensajes\nreturn msg;\n\n//msg.params = [\n//    data.nodo, // valor del nodo\n//    data.tipo_sensor, // valor del tipo de sensor\n//    data.valor]; // valor del sensor\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 80,
+        "wires": [
+            [
+                "56bbe80fbdfef604"
+            ]
+        ]
+    },
+    {
+        "id": "112dc034d59b1e54",
+        "type": "postgresql",
+        "z": "95ddaf5d0d1f31e1",
+        "name": "",
+        "query": "SELECT DISTINCT nodo FROM mediciones ORDER BY nodo\n",
+        "postgreSQLConfig": "e59955f95c0928cd",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 450,
+        "y": 240,
+        "wires": [
+            [
+                "d927675dd517ab50"
+            ]
+        ]
+    },
+    {
+        "id": "bbebeae0d6a44e60",
+        "type": "inject",
+        "z": "95ddaf5d0d1f31e1",
+        "name": "Cargar nodos",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 240,
+        "y": 200,
+        "wires": [
+            [
+                "112dc034d59b1e54"
+            ]
+        ]
+    },
+    {
+        "id": "d927675dd517ab50",
+        "type": "function",
+        "z": "95ddaf5d0d1f31e1",
+        "name": "Procesar lista",
+        "func": "if (msg.payload && msg.payload.length > 0) {\n    // Crear array para ui_dropdown\n    let opciones = msg.payload.map(row => row.nodo);\n    \n    msg.options = opciones;\n    msg.payload = \"\"; // Sin selección inicial\n\n    console.log(msg);    \n    return msg;\n}\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 240,
+        "wires": [
+            [
+                "fa373f9ae65183cb"
+            ]
+        ]
+    },
+    {
+        "id": "fa373f9ae65183cb",
+        "type": "ui_dropdown",
+        "z": "95ddaf5d0d1f31e1",
+        "name": "lista_nodos",
+        "label": "Seleccionar Nodo:",
+        "tooltip": "",
+        "place": "",
+        "group": "26415a70beb4b30c",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 850,
+        "y": 240,
+        "wires": [
+            [
+                "a8f555c727c12f13"
+            ]
+        ]
+    },
+    {
+        "id": "a8f555c727c12f13",
+        "type": "function",
+        "z": "95ddaf5d0d1f31e1",
+        "name": "Capturar",
+        "func": "if (msg.payload && msg.payload !== \"\") {\n    // Guardar nodo seleccionado\n    flow.set(\"nodo_seleccionado\", msg.payload);\n    msg.params = [msg.payload];\n    return msg;\n} else {\n    msg.params = [null];\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1040,
+        "y": 240,
+        "wires": [
+            [
+                "7fcb2f6a2dd8da1b",
+                "24513e79edbc46c4"
+            ]
+        ]
+    },
+    {
+        "id": "318bd1afdfe87815",
+        "type": "ui_button",
+        "z": "95ddaf5d0d1f31e1",
+        "name": "Actualizar",
+        "group": "26415a70beb4b30c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Actualizar listado",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 80,
+        "y": 340,
+        "wires": [
+            [
+                "112dc034d59b1e54",
+                "e7a64e3bb258762c"
+            ]
+        ]
+    },
+    {
+        "id": "7fcb2f6a2dd8da1b",
+        "type": "postgresql",
+        "z": "95ddaf5d0d1f31e1",
+        "name": "",
+        "query": "SELECT DISTINCT ON (tipo_sensor) \n       tipo_sensor, valor, \n       TO_CHAR(tiempo, 'DD/MM/YYYY HH24:MI') as tiempo \nFROM mediciones \nWHERE nodo = $1 \nORDER BY tipo_sensor, tiempo DESC\n",
+        "postgreSQLConfig": "e59955f95c0928cd",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 370,
+        "y": 360,
+        "wires": [
+            [
+                "8ad7ebfa713cbe65"
+            ]
+        ]
+    },
+    {
+        "id": "8ad7ebfa713cbe65",
+        "type": "function",
+        "z": "95ddaf5d0d1f31e1",
+        "name": "Listado por sensor",
+        "func": "if (msg.payload && msg.payload.length > 0) {\n    // Preparar datos para ui_table\n    msg.payload = msg.payload.map(row => ({\n        \"Sensor\": row.tipo_sensor,\n        \"Último Valor\": row.valor,\n        \"Fecha\": row.tiempo || \"Sin fecha\"\n    }));\n    \n    return msg;\n}\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 360,
+        "wires": [
+            [
+                "b1a414a9eb152ad9"
+            ]
+        ]
+    },
+    {
+        "id": "e7a64e3bb258762c",
+        "type": "function",
+        "z": "95ddaf5d0d1f31e1",
+        "name": "Limpiar",
+        "func": "msg.payload = [];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 660,
+        "wires": [
+            [
+                "b1a414a9eb152ad9",
+                "edf0e084c534da69"
+            ]
+        ]
+    },
+    {
+        "id": "5d48d387e7e3952e",
+        "type": "function",
+        "z": "95ddaf5d0d1f31e1",
+        "name": "Historial por sensor",
+        "func": "let nodo = flow.get(\"nodo_seleccionado\");\nlet sensor = msg.payload;\n// Guardar sensor seleccionado\nflow.set(\"sensor_seleccionado\", sensor);\n    \n// Preparar parámetros para query del historial\nmsg.params = [nodo, sensor.Sensor];\nconsole.log(msg.params);    \nmsg.topic = \"cargar_historial\";\n    \nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 480,
+        "wires": [
+            [
+                "e4d2e7dc71f0fd83"
+            ]
+        ]
+    },
+    {
+        "id": "e4d2e7dc71f0fd83",
+        "type": "postgresql",
+        "z": "95ddaf5d0d1f31e1",
+        "name": "Consulta historial",
+        "query": "SELECT \nTO_CHAR(tiempo, 'DD/MM/YYYY HH24:MI') as tiempo, \nvalor \nFROM mediciones \nWHERE nodo = $1 AND tipo_sensor = $2 \nORDER BY tiempo DESC \nLIMIT 50",
+        "postgreSQLConfig": "e59955f95c0928cd",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 670,
+        "y": 480,
+        "wires": [
+            [
+                "eb1bad502d4ed0c0"
+            ]
+        ]
+    },
+    {
+        "id": "eb1bad502d4ed0c0",
+        "type": "function",
+        "z": "95ddaf5d0d1f31e1",
+        "name": "Mostrar historial",
+        "func": "if (msg.payload && msg.payload.length > 0) {\n    // Preparar datos para ui_table\n    msg.payload = msg.payload.map(row => ({\n        \"Último Valor\": row.valor,\n        \"Fecha\": row.tiempo || \"Sin fecha\"\n    }));\n    \n    return msg;\n}\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 560,
+        "wires": [
+            [
+                "edf0e084c534da69"
+            ]
+        ]
+    },
+    {
+        "id": "b1a414a9eb152ad9",
+        "type": "ui_table",
+        "z": "95ddaf5d0d1f31e1",
+        "group": "fdb9a834fe2a2dc5",
+        "name": "Sensores del nodo",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "columns": [],
+        "outputs": 1,
+        "cts": true,
+        "x": 870,
+        "y": 360,
+        "wires": [
+            [
+                "5d48d387e7e3952e"
+            ]
+        ]
+    },
+    {
+        "id": "edf0e084c534da69",
+        "type": "ui_table",
+        "z": "95ddaf5d0d1f31e1",
+        "group": "198c89dea33cfc6d",
+        "name": "",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "columns": [],
+        "outputs": 0,
+        "cts": false,
+        "x": 1050,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "56bbe80fbdfef604",
+        "type": "split",
+        "z": "95ddaf5d0d1f31e1",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "property": "payload",
+        "x": 590,
+        "y": 80,
+        "wires": [
+            [
+                "4cdd69660d4c2cbc"
+            ]
+        ]
+    },
+    {
+        "id": "4cdd69660d4c2cbc",
+        "type": "function",
+        "z": "95ddaf5d0d1f31e1",
+        "name": "Split",
+        "func": "// Convertir cada elemento del array en parámetros para PostgreSQL\nmsg.params = [msg.payload.nodo, msg.payload.tipo_sensor, msg.payload.valor];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 80,
+        "wires": [
+            [
+                "3e8fd2e6e3f44a91"
+            ]
+        ]
+    },
+    {
+        "id": "24513e79edbc46c4",
+        "type": "function",
+        "z": "95ddaf5d0d1f31e1",
+        "name": "Limpiar",
+        "func": "msg.payload = [];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1160,
+        "y": 480,
+        "wires": [
+            [
+                "edf0e084c534da69"
+            ]
+        ]
+    }
+]
