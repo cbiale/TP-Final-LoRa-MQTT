@@ -31,6 +31,7 @@ El proyecto fue desarrollado como trabajo final de la  asignatura **Principios y
 ├── .gitignore                     # Archivos excluidos del repositorio
 ├── iniciar_broker.sh              # Script para iniciar broker MQTT con Docker
 ├── package.json                   # Dependencias de Node.js para Node-RED
+├── package-lock.json              # Bloqueo de versiones exactas de dependencias 
 └── README.md                      # Este archivo
 ```
 
