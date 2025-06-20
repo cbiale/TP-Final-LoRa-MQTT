@@ -70,53 +70,66 @@ Simulador Go
 
 ## Instalación
 
-1. **Broker MQTT**:
+### **Broker MQTT**:
 
-  ```bash
-  ./iniciar_broker.sh
-  ```
+```bash
+./iniciar_broker.sh
+```
 
-2. **Node-RED**:
+### **Node-RED**:
 
-  ```bash
-  npm install
-  node-red
-  ```
+```bash
+npm install
+node-red
+```
 
-  Importar el archivo `flows.json`
+Importar el archivo `flows.json`
 
-3. **Base de datos**: Crear tabla en PostgreSQL (adecuar la conexión a PostgreSQL en Node-RED de acuerdo a su configuración):
+### **Base de datos**: 
 
-  ```sql
-  CREATE TABLE mediciones (
-    id_medicion SERIAL PRIMARY KEY,
-    tiempo TIMESTAMP NOT NULL,
-    nodo VARCHAR(100) NOT NULL,
-    tipo_sensor VARCHAR(100) NOT NULL,
-    valor FLOAT NOT NULL
-  );
-  ```
+Crear tabla en PostgreSQL (adecuar la conexión a PostgreSQL en Node-RED de acuerdo a su configuración):
 
-4. **Simulador** (opcional):
+```sql
+CREATE TABLE mediciones (
+  id_medicion SERIAL PRIMARY KEY,
+  tiempo TIMESTAMP NOT NULL,
+  nodo VARCHAR(100) NOT NULL,
+  tipo_sensor VARCHAR(100) NOT NULL,
+  valor FLOAT NOT NULL
+);
+```
 
-  ```bash
-  cd simulador
-  # Asegurar que las dependencias estén correctamente configuradas
-  go mod tidy
-  # Ejecutar el simulador
-  go run cmd/main.go
-  ```
+### **Simulador** (opcional):
 
-5. **ESP32**: Cargar los archivos correspondientes a los dispositivos usando Arduino IDE
+```bash
+cd simulador
+# Asegurar que las dependencias estén correctamente configuradas
+go mod tidy
+# Ejecutar el simulador
+go run cmd/main.go
+```
 
-  Debe tener instalados:
+### **ESP32**: 
+
+Preparar el entorno Arduino IDE:
+
+Preparar el entorno Arduino IDE:
+
+1. Instalar las siguientes bibliotecas usando el Gestor de Bibliotecas:
+
   - Adafruit BusIO by Adafruit
   - Heltec ESP32 Dev-Boards by Heltec Automation
   - LoRa by Sandeep Mistry
   - PubSubClient by Nick O'Leary
 
-  Nota: Asegurarse de tener instalado el soporte para placas ESP32 en Arduino IDE. 
-  Añadir https://resource.heltec.cn/download/package_heltec_esp32_index.json a la lista de URLs de Gestor de Tarjetas en las preferencias de Arduino IDE.
+2. Configurar el soporte para placas ESP32:
+
+ - Añadir https://resource.heltec.cn/download/package_heltec_esp32_index.json a la lista de URLs de Gestor de Tarjetas en las preferencias de Arduino IDE.
+
+3. Cargar los archivos .ino:
+- Cargar `emisor.ino` al nodo emisor
+- Cargar `receptor.ino` al nodo receptor
+
 
 ## Dashboard
 
