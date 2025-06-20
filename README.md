@@ -114,16 +114,16 @@ go run cmd/main.go
 
 Preparar el entorno Arduino IDE:
 
-1. Instalar las siguientes bibliotecas usando el Gestor de Bibliotecas:
+- Instalar las siguientes bibliotecas usando el Gestor de Bibliotecas:
   - Adafruit BusIO by Adafruit
   - Heltec ESP32 Dev-Boards by Heltec Automation
   - LoRa by Sandeep Mistry
   - PubSubClient by Nick O'Leary
 
-2. Configurar el soporte para placas ESP32:
+- Configurar el soporte para placas ESP32:
  - Añadir https://resource.heltec.cn/download/package_heltec_esp32_index.json a la lista de URLs de Gestor de Tarjetas en las preferencias de Arduino IDE.
 
-3. Cargar los archivos .ino:
+- Cargar los archivos .ino:
   - Cargar `emisor.ino` al nodo emisor
   - Cargar `receptor.ino` al nodo receptor
 
